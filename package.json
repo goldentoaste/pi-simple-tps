@@ -1,0 +1,50 @@
+{
+	"name": "@goldentoaste/pi-simple-tps",
+	"version": "0.1.0",
+	"description": "Pi extension: average tokens per second across the last 10 responses, in the footer status bar",
+	"type": "module",
+	"license": "MIT",
+	"author": {
+		"name": "goldentoaste",
+		"email": "rayg2375@gmail.com"
+	},
+	"keywords": [
+		"pi-package",
+		"pi",
+		"pi-coding-agent",
+		"pi-extension",
+		"tokens-per-second",
+		"tps",
+		"throughput"
+	],
+	"pi": {
+		"extensions": ["./extensions/tps.ts"]
+	},
+	"files": ["extensions/", "README.md", "CHANGELOG.md", "PUBLISHING.md", "LICENSE", "tsconfig.json"],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"validate": "npm run typecheck && npm pack --dry-run",
+		"prepublishOnly": "npm run validate"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "^1.6.1",
+		"typescript": "^5.9.3"
+	},
+	"engines": {
+		"node": ">=22.19.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/goldentoaste/pi-simple-tps.git"
+	},
+	"homepage": "https://github.com/goldentoaste/pi-simple-tps#readme",
+	"bugs": {
+		"url": "https://github.com/goldentoaste/pi-simple-tps/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
